@@ -1,6 +1,12 @@
 from main import BooksCollector
 import pytest
 
+
+fantasy_book = 'Фантастическая книга'
+horror_book = 'Ужасная книга'
+detective_book = 'Детективная книга'
+child_book = 'Мульт книга'
+comedy_book = 'Комедийная книга'
 # класс TestBooksCollector объединяет набор тестов, которыми мы покрываем наше приложение BooksCollector
 # обязательно указывать префикс Test
 class TestBooksCollector:
