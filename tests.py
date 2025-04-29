@@ -1,12 +1,8 @@
 from main import BooksCollector
 import pytest
+import data
 
 
-fantasy_book = 'Фантастическая книга'
-horror_book = 'Ужасная книга'
-detective_book = 'Детективная книга'
-child_book = 'Мульт книга'
-comedy_book = 'Комедийная книга'
 # класс TestBooksCollector объединяет набор тестов, которыми мы покрываем наше приложение BooksCollector
 # обязательно указывать префикс Test
 class TestBooksCollector:
@@ -33,7 +29,10 @@ class TestBooksCollector:
     # чтобы тесты были независимыми в каждом из них создавай отдельный экземпляр класса BooksCollector()
      
     # установка книге валидного жанра 
-    def test_set_book_genre_add_valid_genre(self, collector, prepare_books):
+    def test_set_book_genre_add_valid_genre(self, collector):
+        collector.add_new_book(fantasy_book)
+        collector.set_book_genre(fantasy_book, 'Фантастика')
+
         assert collector.get_book_genre(fantasy_book) == 'Фантастика'
 
     # устанавливаем книге не валидный жанр
