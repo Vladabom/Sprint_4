@@ -101,3 +101,9 @@ class TestBooksCollector:
         collector.delete_book_from_favorites(fantasy_book)
 
         assert collector.get_list_of_favorites_books() == []
+    # получение списка книг из избранного
+    def test_get_list_of_favorites_books_get_two_books(self, collector, prepare_books):
+        collector.add_book_in_favorites(fantasy_book)
+        collector.add_book_in_favorites(horror_book)
+
+        assert collector.get_list_of_favorites_books() == [fantasy_book, horror_book]
