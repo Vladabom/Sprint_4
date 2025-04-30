@@ -10,11 +10,11 @@ def collector():
 @pytest.fixture(scope='function')
 def prepare_books(collector):
     books_genre = [
-        [fantasy_book, 'Фантастика'],
-        [horror_book, 'Ужасы'],
-        [detective_book, 'Детективы'],
-        [child_book, 'Мультфильмы'],
-        [comedy_book, 'Комедии']
+        [data.fantasy_book, 'Фантастика'],
+        [data.horror_book, 'Ужасы'],
+        [data.detective_book, 'Детективы'],
+        [data.child_book, 'Мультфильмы'],
+        [data.comedy_book, 'Комедии']
     ]
 
     for book, genre in books_genre:
